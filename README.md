@@ -5,7 +5,7 @@
 |email|string|null: false|
 |password|string|null: false|
 ### Association
-- has_many :messags
+- has_many :messages
 - has_many :groups
 
 ## messagesテーブル
@@ -21,9 +21,9 @@
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|text|text|null: false|
+|group|text|null: false|
 |user_id|integer|null: false, foreign_key: true|
 |message_id|integer|null: false, foreign_key: true|
 ### Association
-- belongs_to :tweet
+- belongs_to :message
 - belongs_to :user
