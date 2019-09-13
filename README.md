@@ -23,7 +23,7 @@
 |------|----|-------|
 |text|text|null: false|
 |user_id|integer|null: false, foreign_key: true|
-|message|integer|null: false, foreign_key: true|
+|message_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :tweet
 - belongs_to :user
