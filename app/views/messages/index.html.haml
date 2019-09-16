@@ -1,1 +1,53 @@
-hello haml!
+.flash-box
+  .flash-box__notice
+    グループを作成しました
+.wrapper
+
+  .chat-side
+    .chat-side__side-header
+      .chat-side__side-header__box
+        %p.chat-side__side-header__box__user-name
+          hisako
+          %ul.chat-side__side-header__box__menu
+            %li.chat-side__side-header__box__menu__new-group
+              <i class="fa fa-edit"></i>
+            %li.chat-side__side-header__box__menu__edit-user
+              <i class="fa fa-cog"></i>
+            
+    .groups
+      .groups__group
+        .groups__group__group-name
+          テスト
+        .groups__group__latest-message
+          hello!!
+      .groups__group
+        .groups__group-name
+          test
+        .groups__latest-message
+          このグループまとめられないかな
+
+  .chat-main
+    .chat-main__main-header
+      .chat-main__main-header__left-box
+        %h2.chat-main__main-header__left-box__current-group
+          test
+        %ul.chat-main__main-header__left-box__member-list
+          Member：
+          %li.main-header__left-box__member-list__member
+            hisako
+
+      .chat-main__main-header__edit-btn
+        Edit
+
+    .chat-main__messages
+
+    .chat-main__form
+      .chat-main__form__new_message
+        .chat-main__form__new_message__input-box
+          .chat-main__form__new_message__input-box__text
+            .chat-main__form__new_message__input-box__image <i class="fa fa-image"></i>
+        .chat-main__form__new_message__submit-btn
+          Send
+          
+        -# <input type="submit" name="commit" value="Send" class="submit-btn" data-disable-with="Send" />
+
