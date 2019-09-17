@@ -1,6 +1,6 @@
 .flash-box {
   &__notice{
-  color: white;
+  color: $white;
   font-size: 1rem;
   font-weight: lighter;
   text-align: center;
@@ -9,60 +9,58 @@
   background-color: #38AEF0;
   }
 }
-
-.wrapper{
-  font-family:"Hiragino Kaku Gothic ProN";
-}
-
+// .wrapper{
+//   display: flex;
+// }
 .chat-side {
   width: 300px;
-  color:#FFFFFF;
-  float: left;
+  color:$white;
   box-sizing: border-box;
-  display: block;
-  &__side-header{
+  
+  .side-header{ 
+    display: flex;
+    justify-content: space-between;
     font-weight: bold;
+    line-height: 100px;
     background-color: #253141;
     height: 100px;
-    display: flex;
-    align-items: center;
     padding: 0 20px;
-    &__box{
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
+    &__user-name{
+      display: inline-block;
+      font-size:16px;
       font-weight: bold;
-      margin: 0;
-      padding: 0;
-      &__user-name{
-        font-size:16px;
-        float: left;
-        &__menu{
-          display:inline;
-          float:right;
-          margin: 0 0 0 4.8px;
-          &__new-group{
-            margin-left: 0.3rem;       
-            float:right;
-          }
-          &__edit-user{
-            margin-left: 0.3rem;
-            float:right;
-          }
-        }
+      // float: left;
+    }
+    &__lists{
+      // display: flex;
+      margin: 0 0 0 4.8px;
+      .list{
+        // margin-left: 0.3rem;
+        display:inline-block;
+        padding-left:5px;
+        // vertical-align: middle;     
+        // float:right;
+      }
+      .icon{
+        // margin-left: 0.3rem;
+        color: $white;
+        font-size: 16px;
+        // text-align:right;
+        // vertical-align: middle; 
+        // float:right;
       }
     }
   }
 }
 
+
 .groups{
   height: calc(100vh - 100px);
   background-color: #2f3e51;
   padding: 20px 20px 0;
-  overflow: scroll;
-  &__group{
+  .group{
     margin-bottom: 40px;
-  
+    box-sizing: border-box;
   &__group-name{
     font-size: 15px;
     margin-bottom: 5px; 
