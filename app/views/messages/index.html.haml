@@ -1,0 +1,72 @@
+.flash-box
+  .flash-box__notice
+    グループを作成しました
+.wrapper
+  = render 'shared/side_bar'
+  -# .chat-side
+  -#   .side-header
+  -#     %p.side-header__user-name
+  -#       = current_user.name
+  -#     %ul.side-header__lists
+  -#       %li.list
+  -#         = link_to new_group_path do
+  -#           %i.fa.fa-edit
+  -#       %li.list
+  -#         = link_to edit_user_path(current_user) do
+  -#           %i.fa.fa-cog
+            
+  -#   .groups
+  -#     - current_user.groups.each do |group|
+  -#        .group
+  -#         =  link_to group_messages_path(group) do
+    -#           .group__group-name
+    -#             = group.name
+  -#           .group__latest-message
+  -#             hello!!
+  -#         .group
+  -#           .group-name
+  -#             test
+  -#           .group__latest-message
+  -#             メッセージはまだありません。
+
+  .chat-main
+    .main-header
+      .left-box
+        .left-box__title
+          test
+        %ul.left-box__member-list
+          Member：
+          %li.member
+            hisako
+      .right-box
+        .right-box__edit-btn
+          Edit
+
+    .messages
+      .message
+        .top-message
+          .top-message__user-name
+            hisako
+          .top-message__date
+            2019/9/14
+        .bottom-meesage
+          .bottom-message__content
+            こんにちは
+      .message
+        .top-message
+          .top-message__user-name
+            sugi
+          .top-message__date
+            2019/9/15
+        .bottom-meesage
+          .lower-message__content
+            Good!!
+
+    .form
+      %form
+        .form__text
+          %input.form__message{placeholder: "type a message"}
+          %label.form__text__image
+            = fa_icon 'picture-o', class: 'icon'
+            %input.hidden{type: 'file'}
+            %input.form__submit{type: 'submit', value: 'Send'}
